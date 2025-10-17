@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monochrome Scholar Lens (FR)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+            font-family: "Times New Roman", Times, serif;
+        }
+.section {
+            height: 100vh;
+            scroll-snap-align: start;
+        }
+        .nav-button {
+            transition: all 0.3s ease;
+        }
+        .nav-button:hover {
+            transform: translateX(5px);
+        }
+        .active-section {
+            background-color: #f3f4f6;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex h-screen overflow-hidden">
+    <!-- Left Navigation Column -->
+    <div class="w-64 bg-gray-100 border-r border-gray-200 flex flex-col items-center py-8 fixed h-full">
+        <!-- Profile Picture -->
+            <div class="w-32 h-32 rounded bg-gray-300 mb-8 overflow-hidden">
+            <img src="images/profile.jpg" alt="Profile" class="w-full h-full object-cover">
+</div>
+        
+        <!-- Navigation Buttons -->
+        <nav class="w-full flex flex-col items-start space-y-2 px-6">
+            <button onclick="scrollToSection('about')" class="nav-button w-full text-left py-3 px-4 rounded-md text-gray-700 hover:bg-gray-200 flex items-center">
+                <i data-feather="user" class="mr-3"></i> À Propos
+            </button>
+            <button onclick="scrollToSection('cv')" class="nav-button w-full text-left py-3 px-4 rounded-md text-gray-700 hover:bg-gray-200 flex items-center">
+                <i data-feather="file-text" class="mr-3"></i> CV
+            </button>
+            <button onclick="scrollToSection('projects')" class="nav-button w-full text-left py-3 px-4 rounded-md text-gray-700 hover:bg-gray-200 flex items-center">
+                <i data-feather="grid" class="mr-3"></i> Projets
+            </button>
+            <button onclick="scrollToSection('photography')" class="nav-button w-full text-left py-3 px-4 rounded-md text-gray-700 hover:bg-gray-200 flex items-center">
+                <i data-feather="camera" class="mr-3"></i> Photographie
+            </button>
+</nav>
+
+        <!-- Social Links -->
+        <div class="mt-auto flex space-x-4">
+            <a href="#" class="text-gray-500 hover:text-gray-700"><i data-feather="github"></i></a>
+            <a href="#" class="text-gray-500 hover:text-gray-700"><i data-feather="linkedin"></i></a>
+<a href="#" class="text-gray-500 hover:text-gray-700"><i data-feather="mail"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="ml-64 flex-1 overflow-y-auto h-full snap-y snap-mandatory">
+        <!-- About Section -->
+        <section id="about" class="section bg-white p-12 flex items-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl font-light text-gray-800 mb-6">À Propos</h1>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Je suis un chercheur universitaire passionné par la narration visuelle à travers la photographie argentique.
+                    Mon travail explore l'intersection entre technologie, art et expérience humaine.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Quand je ne suis pas au laboratoire ou en classe, vous pouvez me trouver dans les rues avec mon appareil vintage,
+                    capturant des moments souvent invisibles dans notre monde au rythme effréné.
+                </p>
+</div>
+        </section>
+
+        <!-- CV Section -->
+        <section id="cv" class="section bg-gray-50 p-12">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl font-light text-gray-800 mb-4">Curriculum Vitae</h1>
+                <a href="static/cv.pdf" download class="text-gray-600 hover:text-gray-800 mb-8 inline-flex items-center gap-2">
+<span>Télécharger ici</span>
+<i data-feather="download" class="w-4 h-4"></i>
+                </a>
+<div class="space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-light text-gray-700 mb-4 border-b border-gray-200 pb-2">Formation</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <img src="images/logo1.png" alt="Université Laval" class="w-8 h-8 mr-3 mt-1">
+                                <div>
+                                    <h3 class="text-lg font-medium text-gray-800">Doctorat en Études internationales</h3>
+                                    <p class="text-gray-600">Université Laval, Québec, Canada - 2025-En cours</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <img src="images/logo1.png" alt="Université Laval" class="w-8 h-8 mr-3 mt-1">
+                                <div>
+                                    <h3 class="text-lg font-medium text-gray-800">Maîtrise en Études internationales - Sécurité Internationale</h3>
+                                    <p class="text-gray-600">Université Laval, Québec, Canada - 2023-2025</p>
+                                    <div>
+                                    <div class="ml-6 mt-2 pl-4 border-l-2 border-gray-300">
+                                        <p class="text-gray-500 text-sm"> Échange académique à la China Foreign Affairs University, Beijing, Chine - Automne 2024 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="flex items-start">
+                                <img src="images/logo2.jpg" alt="Université Sorbonne Nouvelle" class="w-8 h-8 mr-3 mt-1">
+                                <div>
+                                    <h3 class="text-lg font-medium text-gray-800">Licence en Études internationales - option études européennes</h3>
+                                    <p class="text-gray-600">Université Sorbonne Nouvelle, Paris, France - 2021-2022</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <img src="images/logo5.png" alt="Université Bordeaux Montaigne" class="w-8 h-8 mr-3 mt-1">
+                                <div>
+                                    <h3 class="text-lg font-medium text-gray-800">Licence LLCER Anglais - mineure Histoire</h3>
+                                    <p class="text-gray-600">Université Bordeaux Montaigne, Bordeaux, France - 2018-2021 </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <img src="images/lycee-henri-iv.png" alt="Lycée Henri IV" class="w-8 h-8 mr-3 mt-1">
+                                <div>
+                                    <h3 class="text-lg font-medium text-gray-800">Baccalauréat Scientifique</h3>
+                                    <p class="text-gray-600">Lycée Henri IV, 2008</p>
+                                </div>
+                                <div class="ml-6 mt-2 pl-4 border-l-2 border-gray-300">
+                                        <p class="text-gray-500 text-sm"> Échange académique à la Manchester Metropolitan University, Beijing, Chine - Automne 2024 </p>
+                                    </div>
+                            </div>
+</div>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-light text-gray-700 mb-4 border-b border-gray-200 pb-2">Expérience académique</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800">Maître de Conférences</h3>
+                                <p class="text-gray-600">Institut d'Études Avancées, 2020-Présent</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800">Chercheur Associé</h3>
+                                <p class="text-gray-600">Laboratoire National de Recherche, 2018-2020</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800">Post-doctorant</h3>
+                                <p class="text-gray-600">MIT, 2017-2018</p>
+                            </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-gray-50 p-12">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl font-light text-gray-800 mb-8 border-b border-gray-200 pb-4">Projets Académiques</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-medium text-gray-800 mb-2">Analyse Visuelle de Données</h3>
+                        <p class="text-gray-600 mb-4">Développement de nouvelles méthodes pour interpréter des ensembles de données complexes via des techniques de visualisation.</p>
+<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Research</span>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-medium text-gray-800 mb-2">Préservation de Pellicules</h3>
+                        <p class="text-gray-600 mb-4">Techniques de restauration numérique pour préserver les collections de photographies analogiques.</p>
+<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Photography</span>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-medium text-gray-800 mb-2">Méthodologie Pédagogique</h3>
+                        <p class="text-gray-600 mb-4">Approches innovantes pour l'enseignement des STEM dans les institutions d'enseignement supérieur.</p>
+<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Education</span>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-medium text-gray-800 mb-2">Documentation Urbaine</h3>
+                        <p class="text-gray-600 mb-4">Étude photographique à long terme sur la transformation urbaine dans les zones métropolitaines.</p>
+<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Photography</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Photography Section -->
+        <section id="photography" class="section bg-white p-12">
+<div class="max-w-5xl mx-auto">
+                <h1 class="text-4xl font-light text-gray-800 mb-8">Photographie Argentique</h1>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="images/photo1.JPG" alt="Photo 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo1.jpg')">
+</div>
+                    <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="images/photo2.JPG" alt="Photo 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo2.jpg')">
+</div>
+                    <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="images/photo3.JPG" alt="Photo 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo3.jpg')">
+</div>
+                    <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="images/photo4.JPG" alt="Photo 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo4.jpg')">
+</div>
+                    <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="images/photo5.JPG" alt="Photo 5" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo5.jpg')">
+</div>
+                    <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="images/photo6.JPG" alt="Photo 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo6.jpg')">
+</div>
+</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Mise en évidence de la section active dans la navigation
+function updateActiveSection() {
+            const sections = document.querySelectorAll('section');
+            const navButtons = document.querySelectorAll('.nav-button');
+            
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    navButtons.forEach(button => button.classList.remove('active-section'));
+                    navButtons[index].classList.add('active-section');
+                }
+            });
+        }
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', updateActiveSection);
+        window.addEventListener('load', updateActiveSection);
+        // Image modal functionality
+        function openModal(imageUrl) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4';
+            modal.innerHTML = `
+                <div class="relative h-full w-full flex items-center justify-center">
+                    <button onclick="this.parentElement.parentElement.remove()" class="absolute top-0 right-0 text-white hover:text-gray-300 m-4">
+                        <i data-feather="x" class="w-8 h-8"></i>
+                    </button>
+                    <img src="${imageUrl}" class="max-h-[90vh] max-w-[90vw] object-contain">
+</div>
+            `;
+            document.body.appendChild(modal);
+            feather.replace();
+        }
+
+        feather.replace();
+    </script>
+    <style>
+        #imageModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        #imageModal img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        #imageModal button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            margin: 16px;
+            z-index: 10;
+        }
+</style>
+</body>
+</html>
