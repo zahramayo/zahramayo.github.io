@@ -1,193 +1,310 @@
-<!doctype html>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-  <head>
-    <title>Ce qui va apparaître dans la tab de votre site</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body class="is-preload">
-    <!-- Header -->
-    <section id="header">
-      <header>
-        <span class="image avatar"
-          ><img src="images/portrait.png" alt=""
-        /></span>
-        <h1 id="logo"><a href="#">VOTRE NOM</a></h1>
-        <p>
-          Une courte description de vous<br />
-          Continuer la courte description
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monochrome Scholar Lens (FR)</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Feather (once) -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    * {
+      scroll-behavior: smooth;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body { color: #333; background-color: #f0f0f0; }
+
+    .section { height: 100vh; scroll-snap-align: start; padding: 2rem; }
+
+    /* left nav buttons */
+    .nav-button {
+      transition: none;
+      border-left: 2px solid transparent;
+      border-radius: 0;             /* square corners */
+    }
+    .nav-button:hover {
+      background-color: #B87489;    /* lighter pink */
+      border-left: 2px solid #fff;
+    }
+    .active-section {
+      background-color: #B87489;    /* same as hover */
+      border-left: 2px solid #fff;
+    }
+
+    h1, h2, h3 { font-weight: 400; letter-spacing: 0; }
+  </style>
+</head>
+
+<body class="bg-white flex h-screen overflow-hidden">
+  <!-- Left column -->
+  <div class="w-64 bg-[#6a3f4a] border-r border-[#8e4256] flex flex-col items-center py-8 fixed h-full text-white">
+    <!-- Photo -->
+    <div class="w-32 h-32 mb-8 overflow-hidden border">
+      <img src="images/profile.jpg" alt="profile" class="w-full h-full object-cover grayscale" />
+    </div>
+
+    <!-- Navigation -->
+    <nav class="w-full flex flex-col items-start space-y-0 px-6">
+      <button onclick="scrollToSection('about')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#B87489]">
+        <i data-feather="user" class="mr-3 w-5 h-5"></i>
+        <span class="text-lg">à propos</span>
+      </button>
+      <button onclick="scrollToSection('cv')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#B87489]">
+        <i data-feather="file-text" class="mr-3 w-5 h-5"></i>
+        <span class="text-lg">cv</span>
+      </button>
+      <button onclick="scrollToSection('projects')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#B87489]">
+        <i data-feather="grid" class="mr-3 w-5 h-5"></i>
+        <span class="text-lg">projets</span>
+      </button>
+      <button onclick="scrollToSection('photography')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#B87489]">
+        <i data-feather="camera" class="mr-3 w-5 h-5"></i>
+        <span class="text-lg">photographie</span>
+      </button>
+    </nav>
+
+    <!-- Social -->
+    <div class="mt-auto flex space-x-4 px-6">
+      <a href="#" class="hover:text-gray-300"><i data-feather="github" class="w-6 h-6"></i></a>
+      <a href="#" class="hover:text-gray-300"><i data-feather="linkedin" class="w-6 h-6"></i></a>
+      <a href="#" class="hover:text-gray-300"><i data-feather="mail" class="w-6 h-6"></i></a>
+    </div>
+  </div>
+
+  <!-- Main content (scroll container) -->
+  <div id="main" class="ml-64 flex-1 overflow-y-auto h-full snap-y snap-mandatory">
+    <!-- About -->
+    <section id="about" class="section px-16 py-24 flex items-center">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-[#dd9faf] px-4 py-2 mb-6 inline-block">
+          <h1 class="text-4xl font-light text-white">à propos</h1>
+        </div>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Je suis un chercheur universitaire passionné par la narration visuelle à travers la photographie argentique.
+          Mon travail explore l'intersection entre technologie, art et expérience humaine.
         </p>
-      </header>
-      <nav id="nav">
-        <ul>
-          <li><a href="#one" class="active">À propos</a></li>
-          <li><a href="#two">Mon travail</a></li>
-          <li><a href="#three">Mon CV</a></li>
-          <li><a href="#four">Contact</a></li>
-        </ul>
-      </nav>
-      <footer>
-        <ul class="icons">
-          <li>
-            <!-- Vous pouvez mettre en hyperlien vos reseaux sociaux en modifiant la valeur de href-->
-            <a href="https://x.com/MLB/" class="icon brands fa-twitter"
-              ><span class="label">Twitter</span></a
-            >
-          </li>
-          <li>
-            <a href="#" class="icon brands fa-facebook-f"
-              ><span class="label">Facebook</span></a
-            >
-          </li>
-          <li>
-            <a href="#" class="icon brands fa-linkedin"
-              ><span class="label">LinkedIn</span></a
-            >
-          </li>
-          <li>
-            <a href="#" class="icon brands fa-github"
-              ><span class="label">Github</span></a
-            >
-          </li>
-          <li>
-            <a href="#" class="icon solid fa-envelope"
-              ><span class="label">Email</span></a
-            >
-          </li>
-        </ul>
-      </footer>
+        <p class="text-gray-600 leading-relaxed">
+          Quand je ne suis pas au laboratoire ou en classe, vous pouvez me trouver dans les rues avec mon appareil vintage,
+          capturant des moments souvent invisibles dans notre monde au rythme effréné.
+        </p>
+      </div>
     </section>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Main -->
-      <div id="main">
-        <!-- One -->
-        <section id="one">
-          <div class="image main" data-position="center">
-            <img src="images/bg.jpeg" alt="" />
+    <!-- CV -->
+    <section id="cv" class="section px-16 py-24">
+      <div class="max-w-3xl mx-auto">
+        <!-- Title + pink download icon -->
+        <div class="flex items-center gap-3">
+          <div class="bg-[#ab5d75] px-4 py-2 inline-block">
+            <h1 class="text-4xl font-light text-white">curriculum vitae</h1>
           </div>
-          <div class="container">
-            <header class="major">
-              <h2>VOTRE NOM</h2>
-              <p>Le sous-titre de votre site.</p>
-            </header>
-            <p>
-              Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus
-              col. Commodo id in arcu ante lorem ipsum sed accumsan erat
-              praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo.
-              Vis aliquet tortor ultricies non ante erat nunc integer eu ante
-              ornare amet commetus vestibulum blandit integer in curae ac
-              faucibus integer non. Adipiscing cubilia elementum.
-            </p>
-          </div>
-        </section>
+          <a href="static/cv.pdf" download aria-label="Télécharger le CV (PDF)"
+             class="inline-flex items-center justify-center w-10 h-10 rounded-md
+                    bg-[#ab5d75] hover:bg-[#B87489] focus:outline-none focus:ring-2 focus:ring-white/40">
+            <i data-feather="download" class="w-5 h-5"></i>
+          </a>
+        </div>
 
-        <!-- Two -->
-        <section id="two">
-          <div class="container">
-            <h3>Mes réalisations</h3>
-            <p>
-              Integer eu ante ornare amet commetus vestibulum blandit integer in
-              curae ac faucibus integer non. Adipiscing cubilia elementum
-              integer lorem ipsum dolor sit amet.
-            </p>
-            <ul class="feature-icons">
-              <li class="icon solid fa-code">
-                Ici vous pouvez écrire ce que vous voulez
-              </li>
-              <li class="icon solid fa-cubes">
-                Le class= s'occupe des logos à côté de votre texte
-              </li>
-              <li class="icon solid fa-book">
-                Trouvez autant de choses à écrire que vous le voulez
-              </li>
-              <li class="icon solid fa-coffee">Supprimez le reste</li>
-              <li class="icon solid fa-bolt">Lightning bolt</li>
-              <li class="icon solid fa-users">Shadow clone technique</li>
-            </ul>
-          </div>
-        </section>
+        <div class="space-y-8 mt-6">
+          <div>
+            <div class="bg-[#A86A7C] px-4 py-2 mb-4 inline-block">
+              <h2 class="text-2xl font-light text-white">formation</h2>
+            </div>
 
-        <!-- Three -->
-        <section id="three">
-          <div class="container">
-            <h3>Mon CV</h3>
-            <p>
-              Integer eu ante ornare amet commetus vestibulum blandit integer in
-              curae ac faucibus integer non. Adipiscing cubilia elementum
-              integer. Integer eu ante ornare amet commetus.
-            </p>
-            <div class="features">
-              <article>
-                <a href="#" class="image"
-                  ><img src="images/pic01.jpg" alt=""
-                /></a>
-                <div class="inner">
-                  <h4>Possibly broke spacetime</h4>
-                  <p>
-                    Integer eu ante ornare amet commetus vestibulum blandit
-                    integer in curae ac faucibus integer adipiscing ornare amet.
+            <div class="space-y-4">
+              <!-- Doctorat -->
+              <div class="flex items-start">
+                <img src="images/logo1.png" alt="Université Laval" class="w-8 h-8 mr-3 mt-1">
+                <div>
+                  <h3 class="text-lg font-medium text-gray-800">Doctorat en Études internationales</h3>
+                  <p class="text-gray-600">Université Laval, Québec, Canada — 2025–En cours</p>
+                </div>
+              </div>
+
+              <!-- Master -->
+              <div class="flex items-start">
+                <img src="images/logo1.png" alt="Université Laval" class="w-8 h-8 mr-3 mt-1">
+                <div>
+                  <h3 class="text-lg font-medium text-gray-800">Maîtrise en Études internationales — Sécurité Internationale</h3>
+                  <p class="text-gray-600">Université Laval, Québec, Canada — 2023–2025</p>
+                  <p class="ml-6 mt-2 text-gray-500 text-sm">
+                    Échange académique à la China Foreign Affairs University, Beijing, Chine — Automne 2024
                   </p>
                 </div>
-              </article>
+              </div>
+
+              <!-- Licence 1 -->
+              <div class="flex items-start">
+                <img src="images/logo2.jpg" alt="Université Sorbonne Nouvelle" class="w-8 h-8 mr-3 mt-1">
+                <div>
+                  <h3 class="text-lg font-medium text-gray-800">Licence en Études internationales — option études européennes</h3>
+                  <p class="text-gray-600">Université Sorbonne Nouvelle, Paris, France — 2021–2022</p>
+                </div>
+              </div>
+
+              <!-- Licence 2 -->
+              <div class="flex items-start">
+                <img src="images/logo5.png" alt="Université Bordeaux Montaigne" class="w-8 h-8 mr-3 mt-1">
+                <div>
+                  <h3 class="text-lg font-medium text-gray-800">Licence LLCER Anglais — mineure Histoire</h3>
+                  <p class="text-gray-600">Université Bordeaux Montaigne, Bordeaux, France — 2018–2021</p>
+                  <p class="ml-6 mt-2 text-gray-500 text-sm">
+                    Échange académique à la Manchester Metropolitan University, Manchester, Royaume-Uni — 2020–2021
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
-        </section>
 
-        <!-- Four -->
-        <section id="four">
-          <div class="container">
-            <h3>Me joindre</h3>
-            <p>
-              Integer eu ante ornare amet commetus vestibulum blandit integer in
-              curae ac faucibus integer non.
-            </p>
-            <div class="row gtr-uniform">
-              <div class="col-12">
-                <!-- Vous pouvez mettre votre email ici au lieu de your-email@example.com -->
-                <a
-                  href="mailto:your-email@example.com?subject=Sujet&body=Votre message ici."
-                  class="button primary"
-                >
-                  Envoyer un email
-                </a>
+          <div>
+        <div class="bg-[#e8c4c4] px-4 py-2 mb-4 inline-block">
+  <h2 class="text-2xl font-light text-white">expérience académique</h2>
+</div>
+            <div class="space-y-4">
+              <div>
+                <h3 class="text-lg font-medium text-gray-800 mb-1">Stage de recherche</h3>
+                <p class="text-gray-600">Centre de Recherche CERVO, Québec, Canada - Été 2025 </p>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-gray-800 mb-1">Assistante de recherche</h3>
+                <p class="text-gray-600">École supérieures d'études internationales, Québec, Canada - Novembre 2023-Mars 2024</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-gray-800 mb-1">Post-doctorant</h3>
+                <p class="text-gray-600">MIT, 2017–2018</p>
               </div>
             </div>
           </div>
-        </section>
-        <!-- Five -->
-        <!-- -->
-      </div>
 
-      <!-- Footer -->
-      <section id="footer">
-        <div class="container">
-          <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-          </ul>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+    <!-- Projects -->
+    <section id="projects" class="section px-16 py-32">
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-[#8c6060] px-4 py-2 mb-8 inline-block">
+          <h1 class="text-4xl font-light text-white">projets académiques</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 border">
+            <h3 class="text-xl font-medium text-gray-800 mb-1">Analyse Visuelle de Données</h3>
+            <p class="text-gray-600 mb-4">Développement de nouvelles méthodes pour interpréter des ensembles de données complexes via des techniques de visualisation.</p>
+            <span class="inline-block bg-gray-100 rounded-sm px-2 py-1 text-xs font-light text-gray-600 mr-1">Research</span>
+          </div>
+          <div class="bg-gray-50 p-6 border">
+            <h3 class="text-xl font-medium text-gray-800 mb-1">Préservation de Pellicules</h3>
+            <p class="text-gray-600 mb-4">Techniques de restauration numérique pour préserver les collections de photographies analogiques.</p>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Photography</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-medium text-gray-800 mb-1">Méthodologie Pédagogique</h3>
+            <p class="text-gray-600 mb-4">Approches innovantes pour l'enseignement des STEM dans les institutions d'enseignement supérieur.</p>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Education</span>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-medium text-gray-800 mb-1">Documentation Urbaine</h3>
+            <p class="text-gray-600 mb-4">Étude photographique à long terme sur la transformation urbaine dans les zones métropolitaines.</p>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Photography</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photography -->
+    <section id="photography" class="section px-16 py-24">
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-[#B87489] px-4 py-2 mb-8 inline-block">
+          <h1 class="text-4xl font-light text-white">photographie argentique</h1>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="images/photo1.JPG" alt="Photo 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo1.jpg')">
+          </div>
+          <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="images/photo2.JPG" alt="Photo 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo2.jpg')">
+          </div>
+          <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="images/photo3.JPG" alt="Photo 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo3.jpg')">
+          </div>
+          <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="images/photo4.JPG" alt="Photo 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo4.jpg')">
+          </div>
+          <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="images/photo5.JPG" alt="Photo 5" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo5.jpg')">
+          </div>
+          <div class="aspect-square bg-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="images/photo6.JPG" alt="Photo 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('images/photo6.jpg')">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Scroll inside #main to a section id
+    function scrollToSection(sectionId) {
+      const container = document.getElementById('main');
+      const el = document.getElementById(sectionId);
+      container.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
+    }
+
+    // Highlight active nav item using IntersectionObserver
+    function initActiveSection() {
+      const container = document.getElementById('main');
+      const sections = Array.from(container.querySelectorAll('section'));
+      const navButtons = Array.from(document.querySelectorAll('.nav-button'));
+      let activeIndex = -1;
+
+      const io = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+
+        const idx = sections.indexOf(visible.target);
+        if (idx !== -1 && idx !== activeIndex) {
+          navButtons.forEach(btn => btn.classList.remove('active-section'));
+          navButtons[idx].classList.add('active-section');
+          activeIndex = idx;
+        }
+      }, { root: container, threshold: [0.6] });
+
+      sections.forEach(s => io.observe(s));
+    }
+
+    // Force Feather icons to white
+    function replaceFeatherWhite() {
+      feather.replace({ stroke: 'white', width: 16, height: 16 });
+    }
+
+    window.addEventListener('load', () => {
+      initActiveSection();
+      replaceFeatherWhite();
+    });
+
+    // Image modal
+    function openModal(imageUrl) {
+      const modal = document.createElement('div');
+      modal.className = 'fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4';
+      modal.innerHTML = `
+        <div class="relative h-full w-full flex items-center justify-center">
+          <button onclick="this.parentElement.parentElement.remove()" class="absolute top-0 right-0 text-white hover:text-gray-300 m-4">
+            <i data-feather="x" class="w-8 h-8"></i>
+          </button>
+          <img src="${imageUrl}" class="max-h-[90vh] max-w-[90vw] object-contain">
+        </div>
+      `;
+      document.body.appendChild(modal);
+      replaceFeatherWhite(); // make the "X" white too
+    }
+  </script>
+</body>
 </html>
-
