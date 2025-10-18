@@ -29,11 +29,11 @@
       border-radius: 0;             /* square corners */
     }
     .nav-button:hover {
-      background-color: #3a3a3a;    /* hover */
+      background-color: #6a86b7;    /* hover */
       border-left: 2px solid #fff;
     }
     .active-section {
-      background-color: #3a3a3a;    /* active */
+      background-color: #6a86b7;    /* active */
       border-left: 2px solid #fff;
     }
 
@@ -43,27 +43,27 @@
 
 <body class="bg-white flex h-screen overflow-hidden">
   <!-- Left column -->
-  <div class="w-64 bg-[#1f1f1f] border-r border-[#2a2a2a] flex flex-col items-center py-8 fixed h-full text-white">
+  <div class="w-64 bg-[#4a6087] border-r border-[#4a6087] flex flex-col items-center py-8 fixed h-full text-white">
     <!-- Photo -->
-    <div class="w-40 h-40 mb-8 overflow-hidden border border-[#2a2a2a]">
+    <div class="w-40 h-40 mb-8 overflow-hidden border border-[#4a6087]">
       <img src="images/portrait.png" alt="profile" class="w-full h-full object-cover" />
     </div>
 
     <!-- Navigation -->
     <nav class="w-full flex flex-col items-start space-y-0 px-6">
-      <button onclick="scrollToSection('about')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#3a3a3a]">
+      <button onclick="scrollToSection('about')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#6a86b7]">
         <i data-feather="user" class="mr-3 w-5 h-5"></i>
         <span class="text-lg">à propos</span>
       </button>
-      <button onclick="scrollToSection('cv')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#3a3a3a]">
+      <button onclick="scrollToSection('cv')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#6a86b7]">
         <i data-feather="file-text" class="mr-3 w-5 h-5"></i>
         <span class="text-lg">cv</span>
       </button>
-      <button onclick="scrollToSection('projects')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#3a3a3a]">
+      <button onclick="scrollToSection('projects')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#6a86b7]">
         <i data-feather="grid" class="mr-3 w-5 h-5"></i>
         <span class="text-lg">projets</span>
       </button>
-      <button onclick="scrollToSection('photography')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#3a3a3a]">
+      <button onclick="scrollToSection('photography')" class="nav-button w-full text-left py-4 px-6 flex items-center hover:bg-[#6a86b7]">
         <i data-feather="camera" class="mr-3 w-5 h-5"></i>
         <span class="text-lg">photographie</span>
       </button>
@@ -99,7 +99,7 @@
     <section id="about" class="section px-16 py-24 flex items-start">
       <div class="max-w-4xl mx-auto">
         <!-- Title band: DARK GREY -->
-        <div class="px-4 py-2 mb-6 inline-block" style="background:#2e2e2e">
+        <div class="px-4 py-2 mb-6 inline-block" style="background:#586d9f">
           <h1 class="text-4xl font-light text-white">à propos</h1>
         </div>
 
@@ -111,7 +111,7 @@
         </div>
         <br>
         <p class="text-gray-700 leading-relaxed">
-          ✷ <strong>Intérêts de recherche :</strong> Technologie, soft-power, programmes spatiaux, cyber-espace, Asie
+        <strong><span style="color: #586d9f;">✷ Intérêts de recherche :</span></strong> technologie, soft-power, programmes spatiaux, cyber-espace, Asie
         </p>
       </div>
     </section>
@@ -121,12 +121,12 @@
       <div class="max-w-3xl mx-auto">
         <!-- Title + download icon (MEDIUM DARK GREY) -->
         <div class="flex items-center gap-3">
-          <div class="px-4 py-2 inline-block" style="background:#3b3b3b">
+          <div class="px-4 py-2 inline-block" style="background:#576e95">
             <h1 class="text-4xl font-light text-white"><strong>curriculum vitae</strong></h1>
           </div>
           <a href="static/cv.pdf" download aria-label="Télécharger le CV (PDF)"
              class="inline-flex items-center justify-center w-10 h-10 rounded-md focus:outline-none focus:ring-2 focus:ring-white/40"
-             style="background:#3b3b3b">
+             style="background:#576e95">
             <i data-feather="download" class="w-5 h-5"></i>
           </a>
         </div>
@@ -134,17 +134,17 @@
         <div class="space-y-8 mt-6">
           <div>
             <!-- Formation band: LIGHT GREY -->
-            <div class="px-4 py-2 mb-4 inline-block" style="background:#e6e6e6">
-              <h2 class="text-2xl font-light text-[#111111]">formation</h2>
+            <div class="px-4 py-2 mb-4 inline-block" style="background:#98b1c8">
+              <h2 class="text-2xl font-light text-white">formation</h2>
             </div>
-
+<div class="mb-8"></div>
             <div class="space-y-4">
               <!-- Doctorat -->
               <div class="flex items-start">
                 <img src="images/logo1.png" alt="Université Laval" class="w-8 h-8 mr-3 mt-1">
                 <div>
                   <h3 class="text-lg font-medium text-gray-900">Doctorat en Études internationales</h3>
-                  <p class="text-gray-700">Université Laval, Québec, Canada — 2025 – En cours</p>
+                  <p class="text-gray-700">Université Laval - Québec, Canada — 2025 – En cours</p>
                 </div>
               </div>
 
@@ -153,7 +153,7 @@
                 <img src="images/logo1.png" alt="Université Laval" class="w-8 h-8 mr-3 mt-1">
                 <div>
                   <h3 class="text-lg font-medium text-gray-900">Maîtrise en Études internationales — Sécurité Internationale</h3>
-                  <p class="text-gray-700">Université Laval, Québec, Canada — 2023 – 2025</p>
+                  <p class="text-gray-700">Université Laval - Québec, Canada — 2023 – 2025</p>
                   <p class="ml-6 mt-2 text-gray-600 text-sm">
                     Échange académique à la China Foreign Affairs University, Beijing, Chine — Automne 2024
                   </p>
@@ -165,7 +165,7 @@
                 <img src="images/logo2.jpg" alt="Université Sorbonne Nouvelle" class="w-8 h-8 mr-3 mt-1">
                 <div>
                   <h3 class="text-lg font-medium text-gray-900">Licence en Études internationales — option études européennes</h3>
-                  <p class="text-gray-700">Université Sorbonne Nouvelle, Paris, France — 2021 – 2022</p>
+                  <p class="text-gray-700">Université Sorbonne Nouvelle - Paris, France — 2021 – 2022</p>
                 </div>
               </div>
 
@@ -174,7 +174,7 @@
                 <img src="images/logo5.png" alt="Université Bordeaux Montaigne" class="w-8 h-8 mr-3 mt-1">
                 <div>
                   <h3 class="text-lg font-medium text-gray-900">Licence LLCER Anglais — mineure Histoire</h3>
-                  <p class="text-gray-700">Université Bordeaux Montaigne, Bordeaux, France — 2018 – 2021 </p>
+                  <p class="text-gray-700">Université Bordeaux Montaigne - Bordeaux, France — 2018 – 2021 </p>
                   <p class="ml-6 mt-2 text-gray-600 text-sm">
                     Échange académique à la Manchester Metropolitan University, Manchester, Royaume-Uni — 2020 – 2021
                   </p>
@@ -186,17 +186,25 @@
 
           <div>
             <!-- Expérience band: MID-LIGHT GREY (different from Formation) -->
-            <div class="px-4 py-2 mb-4 inline-block" style="background:#d4d4d4">
-              <h2 class="text-2xl font-light text-[#111111]">expérience académique</h2>
+                          <div class="mb-12"></div>
+            <div class="px-4 py-2 mb-4 inline-block" style="background:#75a7d3">
+              <h2 class="text-2xl font-light text-white">expérience académique</h2>
             </div>
+            <div class="mb-8"></div>
             <div class="space-y-4">
-              <div>
+              <div class="flex items-start">
+                <img src="images/logo7.png" alt="Centre de Recherche CERVO" class="w-8 h-8 mr-3 mt-1">
+                <div>
                 <h3 class="text-lg font-medium text-gray-900 mb-1">Stage de recherche</h3>
-                <p class="text-gray-700">Centre de Recherche CERVO, Québec, Canada — Été 2025</p>
+                <p class="text-gray-700">Centre de Recherche CERVO - Québec, Canada — Été 2025</p>
               </div>
-              <div>
+            </div>
+
+                <div class="flex items-start">
+                <img src="images/logo1.png" alt="Université Laval" class="w-8 h-8 mr-3 mt-1">
+                <div>
                 <h3 class="text-lg font-medium text-gray-900 mb-1">Assistante de recherche</h3>
-                <p class="text-gray-700">École supérieure d'études internationales, Québec, Canada — Nov. 2023 – Mars 2024</p>
+                <p class="text-gray-700">École supérieure d'études internationales - Québec, Canada — Nov. 2023 – Mars 2024</p>
               </div>
             </div>
           </div>
@@ -206,42 +214,32 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="section px-16 py-32">
-      <div class="max-w-3xl mx-auto">
-        <!-- Projects band: VERY DARK GREY -->
-        <div class="px-4 py-2 mb-8 inline-block" style="background:#262626">
-          <h1 class="text-4xl font-light text-white">projets académiques</h1>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 border border-gray-200">
-            <h3 class="text-xl font-medium text-gray-900 mb-1">Analyse Visuelle de Données</h3>
-            <p class="text-gray-700 mb-4">Développement de nouvelles méthodes pour interpréter des ensembles de données complexes via des techniques de visualisation.</p>
-            <span class="inline-block bg-gray-100 rounded-sm px-2 py-1 text-xs font-light text-gray-700 mr-1">Research</span>
-          </div>
-          <div class="bg-gray-50 p-6 border border-gray-200">
-            <h3 class="text-xl font-medium text-gray-900 mb-1">Préservation de Pellicules</h3>
-            <p class="text-gray-700 mb-4">Techniques de restauration numérique pour préserver les collections de photographies analogiques.</p>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2">#Photography</span>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-            <h3 class="text-xl font-medium text-gray-900 mb-1">Méthodologie Pédagogique</h3>
-            <p class="text-gray-700 mb-4">Approches innovantes pour l'enseignement des STEM dans les institutions d'enseignement supérieur.</p>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2">#Education</span>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-            <h3 class="text-xl font-medium text-gray-900 mb-1">Documentation Urbaine</h3>
-            <p class="text-gray-700 mb-4">Étude photographique à long terme sur la transformation urbaine dans les zones métropolitaines.</p>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2">#Photography</span>
-          </div>
-        </div>
-      </div>
-    </section>
+<section id="projects" class="section px-16 py-32">
+  <div class="max-w-3xl mx-auto">
+    <!-- Projects band: VERY DARK GREY -->
+    <div class="px-4 py-2 mb-8 inline-block" style="background:#446d92">
+      <h1 class="text-4xl font-light text-white">projet(s) académique(s)</h1>
+    </div>
+    
+    <!-- Rectangle unique -->
+    <div class="bg-gray-50 p-8 border border-gray-200">
+      <h3 class="text-2xl font-medium text-gray-900 mb-3">Titre provisoire</h3>
+      <p class="text-gray-700 mb-6 leading-relaxed">
+        Description du projet académique ici.
+      </p>
+      <a href="TON-LIEN-ICI" target="_blank" 
+         class="inline-block bg-gray-100 rounded-sm px-4 py-2 text-sm font-light text-gray-700 hover:bg-gray-200 transition-colors">
+        en savoir plus
+      </a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Photography -->
-    <section id="photography" class="section px-16 py-24">
-      <div class="max-w-5xl mx-auto">
+<section id="photography" class="px-16 py-24 pb-24 scroll-snap-align-start" style="min-height: 100vh;">      <div class="max-w-5xl mx-auto">
         <!-- Photography band: DARK-MEDIUM GREY (different again) -->
-        <div class="px-4 py-2 mb-8 inline-block" style="background:#444444">
+        <div class="px-4 py-2 mb-8 inline-block" style="background:#5d8aa8">
           <h1 class="text-4xl font-light text-white">photographie argentique</h1>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
