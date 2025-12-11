@@ -346,7 +346,7 @@
     </section>
   </div>
 
-  <script>
+ <script>
     // Scroll inside #main to a section id
     function scrollToSection(sectionId) {
       const container = document.getElementById('main');
@@ -378,37 +378,49 @@
       sections.forEach(s => io.observe(s));
     }
 
-    // Force Feather icons to white (good for dark backgrounds)
-    function replaceFeatherWhite() {
-      feather.replace({ stroke: 'white', width: 16, height: 16 });
+    // Initialiser Feather icons - CORRECTION ICI
+    function initFeatherIcons() {
+      // Attendre que Feather soit chargé
+      if (typeof feather !== 'undefined') {
+        feather.replace({ stroke: 'white', width: 16, height: 16 });
+      } else {
+        // Si Feather n'est pas encore chargé, réessayer après un court délai
+        setTimeout(initFeatherIcons, 100);
+      }
     }
 
-    window.addEventListener('load', () => {
+    // Charger au chargement de la page ET au chargement complet
+    document.addEventListener('DOMContentLoaded', () => {
       initActiveSection();
-      replaceFeatherWhite();
+      initFeatherIcons();
+    });
+
+    window.addEventListener('load', () => {
+      initFeatherIcons(); // Appeler à nouveau pour être sûr
     });
 
     // Image modal
-   function openModal(imageUrl) {
-  const modal = document.createElement('div');
-  modal.className = 'fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 cursor-pointer';
-  modal.onclick = () => modal.remove(); // Fermer en cliquant n'importe où
-  
-  modal.innerHTML = `
-    <div class="relative h-full w-full flex items-center justify-center">
-      <button onclick="event.stopPropagation(); this.parentElement.parentElement.remove()" 
-              class="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
-        <i data-feather="x" class="w-8 h-8"></i>
-      </button>
-      <img src="${imageUrl}" 
-           class="max-h-[90vh] max-w-[90vw] object-contain"
-           onclick="event.stopPropagation()">
-    </div>
-  `;
-  document.body.appendChild(modal);
-  feather.replace(); // Actualiser les icônes
-}
+    function openModal(imageUrl) {
+      const modal = document.createElement('div');
+      modal.className = 'fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 cursor-pointer';
+      modal.onclick = () => modal.remove();
+      
+      modal.innerHTML = `
+        <div class="relative h-full w-full flex items-center justify-center">
+          <button onclick="event.stopPropagation(); this.parentElement.parentElement.remove()" 
+                  class="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
+            <i data-feather="x" class="w-8 h-8"></i>
+          </button>
+          <img src="${imageUrl}" 
+               class="max-h-[90vh] max-w-[90vw] object-contain"
+               onclick="event.stopPropagation()">
+        </div>
+      `;
+      document.body.appendChild(modal);
+      feather.replace();
+    }
   </script>
+  
 </body>
 </html>
  </div> <!-- Fermeture du conteneur flex -->
