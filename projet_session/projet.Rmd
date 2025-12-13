@@ -1,5 +1,5 @@
 ---
-title: 
+title: POL-6078 - Projet de session
 author: 
 date: 
 output:
@@ -191,7 +191,7 @@ Les différents outils mobilisés au cours de ce projet ont été sélectionnés
 <p>Drozhashchikh, E. (2018). China’s National Space Program and the “China Dream”. <em>Astropolitics</em>, <em>16</em>(3), 175–186. https://doi.org/10.1080/14777622.2018.1535207</p>
 <p>Khan, Z., &amp; Khan, A. (2015). Chinese Capabilities as a Global Space Power. <em>Astropolitics</em>, <em>13</em>(2-3), 185–204.https://doi.org/10.1080/14777622.2015.1084168 </p>
 <p>Lafaye, J., &amp; Sainjon, B. (2020). Quand les innovations remettent en cause la maîtrise de l’espace. <em>Inflexions</em>, <em>43</em>(1), 99–107. https://doi.org/10.3917/infle.043.0099</p>
-<p>Morin, J.-F., &amp; Tepper, E. (2023). The empire strikes back: Comparing US and China’s structural power in outer space. <em>Global Studies Quarterly</em>, <em>3</em>(4), ksad067. https://doi.org/10.1093/isagsq/ksad067</p>
+<p>Morin, J.-F., &amp; Tepper, E. (2023). The Empire Strikes Back: Comparing US and China’s Structural Power in Outer Space. <em>Global Studies Quarterly</em>, <em>3</em>(4), ksad067. https://doi.org/10.1093/isagsq/ksad067</p>
 <p>Nawa, A. S., &amp; Wibowo, P. (2025). China's ambition in enhancing Indo-Pacific geopolitical power through China’s space program in 2018–2024. <em>Jurnal Ilmu Sosial dan Ilmu Politik Malikussaleh (JSPM)</em>. https://doi.org/10.29103/jspm.v6i2.21935</p>
 <p>Pankova, L. V., Gusarova, O. V., &amp; Stefanovich, D. (2021). International cooperation in space activities amid great power competition. <em>Russia in Global Affairs</em>, <em>19</em>(4), 97–117. https://doi.org/10.31278/1810-6374-2021-19-4-97-117</p>
 <p>Perfilyev, N. (2010). The Sino-Russian Space Entente. <em>Astropolitics</em>, <em>8</em>(1), 19–34. https://doi.org/10.1080/14777622.2010.494516</p>
